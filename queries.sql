@@ -29,6 +29,15 @@ WHERE date_of_birth > '2022-01-01';
 BEGIN;
 SAVEPOINT my_savepoint;
 
+BEGIN;
+UPDATE animals
+SET species = 'unspecified';
+SELECT * FROM animals;
+ROLLBACK;
+SELECT * FROM animals;
+
+UPDATE animals
+SET weight_kg = weight_kg * -1;
 
 SELECT COUNT(*) AS animal_count
 FROM animals;
