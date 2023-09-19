@@ -17,7 +17,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [Getting Started](#getting-started-1)
     - [Requirements](#requirements)
     - [Clone this repository](#clone-this-repository)
@@ -35,15 +34,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 # 📖 [VET_CLINIC_DATABASE] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
 
-**[VET_CLINIC_DATABASE]** is a...
+**VET_CLINIC_DATABASE** is a relational database create to store animals's information, insert some data into it, and query it.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
 <summary>Database</summary>
@@ -56,19 +52,8 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](<replace-with-your-deployment-URL>)
+- **Create the database**
+- **Insert and query data in sql**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,8 +111,6 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 ## Authors
 
 👤 **Derek Akrasi Konadu**
@@ -140,11 +123,9 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Optimise database querry time**
+- [ ] Include more column to the database and optimise querries in database
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
