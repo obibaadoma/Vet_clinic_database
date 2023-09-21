@@ -70,3 +70,14 @@ FROM animals
 WHERE date_of_birth >= '1990-01-01' AND date_of_birth <= '2000-12-31'
 GROUP BY neutered;
 
+--  day 3
+CREATE TABLE owners(
+   id INTEGER PRIMARY KEY,
+   full_name VARCHAR(50),
+   age INTEGER);
+
+   CREATE TABLE species(
+   id INTEGER PRIMARY KEY,
+   name VARCHAR(50)
+);
+

@@ -18,5 +18,16 @@ INSERT INTO animals (name,date_of_birth,escape_attempts,neutered,weight_kg)VALUE
 ('Blossom','1998-10-13',3,true,17),
 ('Ditto','2022-05-14',4,true,22);
 
+  INSERT INTO species (name) VALUES
+('Pokemon'),('Digimon');
+
+UPDATE animals
+SET species_id = (
+  CASE 
+    WHEN name LIKE '%mon' THEN (SELECT id FROM species WHERE name = 'Digimon')
+    ELSE (SELECT id FROM species WHERE name = 'Pokemon')
+  END
+);
+
 
 
