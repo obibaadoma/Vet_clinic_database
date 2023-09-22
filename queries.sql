@@ -106,3 +106,75 @@ JOIN animals ON owners.id = animals.owner_id
 GROUP BY owners.full_name
 ORDER BY count DESC
 LIMIT 1;
+
+-- Day 4
+
+SELECT a.*
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+JOIN vets vt ON v.vet_id = vt.id
+WHERE vt.name = 'William Tatcher'
+ORDER BY v.date_of_visit DESC
+LIMIT 1;
+
+SELECT COUNT(DISTINCT a.id)
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+JOIN vets vt ON v.vet_id = vt.id
+WHERE vt.name = 'Stephanie Mendez';
+
+SELECT vt.name AS vet_name, array_agg(s.name) AS specialties
+FROM vets vt
+LEFT JOIN specializations sp ON vt.id = sp.vet_id
+LEFT JOIN species s ON sp.species_id = s.id
+GROUP BY vt.name;
+
+SELECT a.*
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+JOIN vets vt ON v.vet_id = vt.id
+WHERE vt.name = 'Stephanie Mendez'
+AND v.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+
+SELECT a.id AS animal_id, a.name AS animal_name, COUNT(v.animal_id) AS visit_count
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+GROUP BY a.id, a.name
+ORDER BY visit_count DESC
+LIMIT 1;
+
+SELECT a.*, v.date_of_visit
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+JOIN vets vt ON v.vet_id = vt.id
+WHERE vt.name = 'Maisy Smith'
+ORDER BY v.date_of_visit ASC
+LIMIT 1;
+
+SELECT a.*, vt.name AS vet_name, v.date_of_visit
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+JOIN vets vt ON v.vet_id = vt.id
+ORDER BY v.date_of_visit DESC
+LIMIT 1;
+
+SELECT a.*, vt.name AS vet_name
+FROM animals a
+JOIN visits v ON a.id = v.animal_id
+JOIN vets vt ON v.vet_id = vt.id
+LEFT JOIN specializations sp ON vt.id = sp.vet_id AND a.species_id = sp.species_id
+WHERE sp.species_id IS NULL;
+
+SELECT s.name AS recommended_specialty
+FROM (
+    SELECT a.species_id, COUNT(*) AS visit_count
+    FROM animals a
+    JOIN visits v ON a.id = v.animal_id
+    JOIN vets vt ON v.vet_id = vt.id
+    WHERE vt.name = 'Maisy Smith'
+    GROUP BY a.species_id
+    ORDER BY visit_count DESC
+    LIMIT 1
+) AS most_visited_species
+JOIN species s ON most_visited_species.species_id = s.id;
+
