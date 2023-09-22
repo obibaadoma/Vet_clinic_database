@@ -60,4 +60,41 @@ ADD CONSTRAINT fk_owner_id
   FOREIGN KEY (owner_id)
   REFERENCES owners (id);
 
+CREATE TABLE specializations (
+  vet_id INTEGER,
+  species_id INTEGER,
+  PRIMARY KEY (vet_id, species_id),
+  FOREIGN KEY (vet_id) REFERENCES vets (id),
+  FOREIGN KEY (species_id) REFERENCES species (id)
+);
 
+CREATE TABLE visits (
+  visit_id SERIAL PRIMARY KEY,
+  animal_id INTEGER,
+  vet_id INTEGER,
+  visit_date DATE,
+  FOREIGN KEY (animal_id) REFERENCES animals (id),
+  FOREIGN KEY (vet_id) REFERENCES vets (id)
+);
+
+ INSERT INTO VETS (name,age,date_of_graduation) VALUES 
+ ('Maisy Smith','26','2019-01-17'),
+ ('Stephanie Mendez','64','1981-05-14'),
+ ('Jack Harkness','38','2008-06-08');
+
+ INSERT INTO specializations (vet_id, species_id)
+VALUES (
+  (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), 
+  -- Replace with the correct vet's name
+  (SELECT id FROM species WHERE name = 'Digimon') 
+  -- Replace with the correct species name
+);
+
+-- Insert specialization for Pokemon
+INSERT INTO specializations (vet_id, species_id)
+VALUES (
+  (SELECT id FROM vets WHERE name = 'Stephanie Mendez'), 
+  -- Replace with the correct vet's name
+  (SELECT id FROM species WHERE name = 'Pokemon')
+   -- Replace with the correct species name
+);
