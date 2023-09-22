@@ -71,13 +71,38 @@ WHERE date_of_birth >= '1990-01-01' AND date_of_birth <= '2000-12-31'
 GROUP BY neutered;
 
 --  day 3
-CREATE TABLE owners(
-   id INTEGER PRIMARY KEY,
-   full_name VARCHAR(50),
-   age INTEGER);
+ SELECT *
+  FROM species s
+  JOIN animals a ON a.owner_id = s.id;
 
-   CREATE TABLE species(
-   id INTEGER PRIMARY KEY,
-   name VARCHAR(50)
-);
+  SELECT * 
+FROM animals AS a
+JOIN species AS s ON a.species_id = s.id
+WHERE s.id = 1;
 
+SELECT full_name, name
+FROM owners
+LEFT JOIN animals ON owners.id = animals.owner_id;
+
+SELECT species.name, COUNT(animals.id) AS count
+FROM species
+JOIN animals ON species.id = animals.species_id
+GROUP BY species.name;
+
+SELECT animals.name
+FROM animals
+JOIN owners ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Jennifer Orwell';
+
+SELECT animals.name, owners.full_name
+FROM animals
+JOIN owners ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Dean Winchester'
+AND animals.escape_attempts = 0;
+
+SELECT owners.full_name, COUNT(animals.id) AS count
+FROM owners
+JOIN animals ON owners.id = animals.owner_id
+GROUP BY owners.full_name
+ORDER BY count DESC
+LIMIT 1;
