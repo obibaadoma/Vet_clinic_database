@@ -116,7 +116,7 @@ To run the project, execute the following command:
 👤 **Derek Akrasi Konadu**
 
  **GitHub**  | [@githubhandle](https://github.com/obibaadoma)
-**Twitter**: [@twitterhandle](https://twitter.com/twitterhandle)
+**Twitter**: [@twitterhandle](https://twitter.com/obibakwekuadoma)
 **LinkedIn**: [LinkedIn](https://linkedin.com/in/derek-akrasi-konadu)
 
 <!-- FUTURE FEATURES -->
@@ -133,6 +133,8 @@ To run the project, execute the following command:
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](/MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
