@@ -104,3 +104,13 @@ VALUES
   (10, 1, '2021-01-11');    -- Blossom visited William Tatcher
 
 
+SELECT * FROM animals;
+
+explain analyze SELECT COUNT(*) FROM visits where animal_id = 4
+
+EXPLAIN ANALYZE
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+SELECT * FROM visits where vet_id = 2;
+SELECT COUNT(*) FROM visits where animal_id = 4;
+
+CREATE INDEX idx_owners_email ON owners (email);
