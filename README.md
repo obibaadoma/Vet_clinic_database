@@ -35,7 +35,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 # 📖 [VET_CLINIC_DATABASE] <a name="about-project"></a>
 
 
-**VET_CLINIC_DATABASE** is a relational database create to store animals's information, insert some data into it, and query it.
+**VET_CLINIC_DATABASE** is a relational database created to efficiently store, manage, and query animal information.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -115,7 +115,7 @@ To run the project, execute the following command:
 
 👤 **Derek Akrasi Konadu**
 
- **GitHub**  | [@githubhandle](https://github.com/obibaadoma)
+**GitHub**  | [@githubhandle](https://github.com/obibaadoma)
 **Twitter**: [@twitterhandle](https://twitter.com/obibakwekuadoma)
 **LinkedIn**: [LinkedIn](https://linkedin.com/in/derek-akrasi-konadu)
 
