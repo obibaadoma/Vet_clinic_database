@@ -103,7 +103,7 @@ VALUES
   (10, 3, '2020-05-24'),    -- Blossom visited Stephanie Mendez
   (10, 1, '2021-01-11');    -- Blossom visited William Tatcher
 
-
+-- Day 4
 SELECT * FROM animals;
 
 explain analyze SELECT COUNT(*) FROM visits where animal_id = 4
