@@ -119,6 +119,15 @@ To run the project, execute the following command:
 **Twitter**: [@twitterhandle](https://twitter.com/obibakwekuadoma)
 **LinkedIn**: [LinkedIn](https://linkedin.com/in/derek-akrasi-konadu)
 
+👤 **Hafizullah Rasa**
+
+- GitHub: [@githubhandle](https://github.com/hafiz1379)
+- Twitter: [@twitterhandle](https://twitter.com/Hafizrasa1379?s=35)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hafizullah-rasa-8436a1257/)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
