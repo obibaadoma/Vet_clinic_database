@@ -1,5 +1,5 @@
 /* Database schema to keep the structure of entire database. */
-
+-- Day 1
 CREATE TABLE animals (
     id integer ,
     name text,
